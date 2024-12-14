@@ -13,6 +13,15 @@ The system also supports advanced analytics, such as identifying the top emailed
 
 ---
 
+## Chrome Extension Popup
+![popup](screenshots/extension-popup.png?raw=true)
+
+
+
+![search query result](screenshots/result-with-query.png?raw=true)
+
+---
+
 ## Project Structure
 
 The project is organized into the following key folders and files:
@@ -214,12 +223,6 @@ Here are some queries that can be used with this search engine:
 2. **Create a feature branch**.
 3. **Make your changes**.
 4. **Submit a pull request**.
-
----
-
-## License
-
-This project is licensed under the MIT License. See the `LICENSE` file for more details.
 
 ---
 
