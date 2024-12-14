@@ -1,0 +1,26 @@
+{
+    "manifest_version": 3,
+    "name": "Outlook Search Query Tracker",
+    "version": "1.0",
+    "description": "Captures Outlook search queries and sends to popup",
+    "permissions": [
+      "activeTab",
+      "tabs",
+      "storage"
+    ],
+    "action": {
+      "default_popup": "popup.html"
+    },
+    "content_scripts": [
+      {
+        "matches": [
+          "https://outlook.office.com/mail/*"
+        ],
+        "js": ["content.js"],
+        "run_at": "document_start"
+      }
+    ],
+    "background": {
+      "service_worker": "background.js"
+    }
+}

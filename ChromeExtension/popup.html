@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Outlook Search Queries</title>
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            width: 350px;
+            padding: 10px;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #f5f5f5;
+        }
+
+        h2 {
+            text-align: center;
+            font-size: 20px;
+            color: #333;
+            margin-bottom: 15px;
+            font-weight: bold;
+        }
+
+        #queryList {
+            max-height: 400px;
+            overflow-y: auto;
+            background-color: #ffffff;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            padding: 10px;
+            margin-bottom: 10px;
+        }
+
+        .query-item {
+            background-color: #ffffff;
+            padding: 15px;
+            margin-bottom: 10px;
+            border-radius: 12px;
+            border: 1px solid #e0e0e0;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+            transition: all 0.2s ease-in-out;
+            cursor: pointer;
+        }
+
+        .query-item:hover {
+            background-color: #f0f8ff;
+            transform: translateY(-4px);
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+        }
+
+        .email-container {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .email-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 8px;
+        }
+
+        .email-from {
+            font-size: 14px;
+            color: #0078d4;
+            font-weight: bold;
+            max-width: 60%;
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
+        }
+
+        .email-to {
+            font-size: 12px;
+            color: #666;
+            max-width: 60%;
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
+        }
+
+        .email-date {
+            font-size: 12px;
+            color: #888;
+            text-align: right;
+            white-space: nowrap;
+            min-width: 100px;
+        }
+
+        .email-subject {
+            font-size: 16px;
+            font-weight: bold;
+            color: #333;
+            margin: 5px 0 10px;
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
+        }
+
+        .email-preview {
+            font-size: 13px;
+            color: #555;
+            margin-top: 8px;
+            line-height: 1.4;
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
+        }
+
+        #clearButton {
+            background-color: #0078d4;
+            color: white;
+            border: none;
+            padding: 10px;
+            width: 100%;
+            border-radius: 8px;
+            font-size: 16px;
+            font-weight: bold;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        #clearButton:hover {
+            background-color: #005a9e;
+        }
+
+        ::-webkit-scrollbar {
+            width: 8px;
+        }
+
+        ::-webkit-scrollbar-thumb {
+            background-color: #0078d4;
+            border-radius: 8px;
+        }
+
+        ::-webkit-scrollbar-track {
+            background-color: #f1f1f1;
+        }
+    </style>
+</head>
+<body>
+    <h2>Outlook Emails</h2>
+    <div id="queryList"></div>
+    <button id="clearButton">Clear Emails</button>
+    <script src="popup.js"></script>
+</body>
+</html>
